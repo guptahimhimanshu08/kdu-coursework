@@ -1,5 +1,7 @@
 package com.kickdrum.smartlock.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.kickdrum.smartlock.annotations.Audited;
@@ -10,7 +12,9 @@ import com.kickdrum.smartlock.exception.SmartLockAccessException;
 
 @Service
 public class SmartLockService {
-    
+    private static final Logger log =
+            LoggerFactory.getLogger(SmartLockService.class);
+            
     @Audited
     @SecureAction
     public void unlock(String user){
@@ -21,12 +25,12 @@ public class SmartLockService {
            throw new SmartLockAccessException("SECURITY ALERT: Unauthorized access blocked!" );
         }
 
-        System.out.println("The door is now open for " + user);
+        log.info("The door is now open for {}", user);
     }
 
     @SecureAction
     public void checkBattery(){
 
-        System.out.println("Battery status is OK.");
+        log.info("Battery status is OK.");
     }
 }

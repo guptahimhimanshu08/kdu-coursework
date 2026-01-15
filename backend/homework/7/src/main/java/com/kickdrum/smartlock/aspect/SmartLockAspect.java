@@ -37,11 +37,11 @@ public class SmartLockAspect {
         try {
             proceedJoinPoint.proceed();
         } catch (Throwable e) {
-            log.error("ERROR during battery check: " + e.getMessage());
+            log.error("ERROR during battery check: {}", e.getMessage());
         }
         long end = System.currentTimeMillis();
 
-        log.info("Battery check took " + (end - start) + " ms");
+        log.info("Battery check took {} ms", (end - start));
     }
 
     @Around("@annotation(com.kickdrum.smartlock.annotations.SecureAction) && args(user)")
@@ -59,7 +59,7 @@ public class SmartLockAspect {
         throwing = "exception"
     )
     public void triggerAlarm(Exception exception) {
-        log.error("ALARM TRIGGERED: System error detected : " + exception.getMessage());
+        log.error("ALARM TRIGGERED: System error detected : {}", exception.getMessage());
     }
 
 }
