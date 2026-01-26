@@ -10,12 +10,14 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kdu.smarthome.domain.room.Room;
 import com.kdu.smarthome.services.RoomService;
 
 @RestController
+@RequestMapping(ApiEndpoints.House.BASE)
 public class RoomController {
     
     private static final Logger logger = LoggerFactory.getLogger(RoomController.class);

@@ -23,7 +23,7 @@ public class AuthController {
         this.authenticationService = authenticationService;
     }
 
-    @PostMapping("/login")
+    @PostMapping(ApiEndpoints.Auth.LOGIN)
     public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest request) {
         logger.info("Login attempt for user: {}", request.getUsername());
 

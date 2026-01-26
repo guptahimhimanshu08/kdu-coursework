@@ -22,7 +22,7 @@ import com.kdu.smarthome.dto.response.RoomDeviceResponse;
 import com.kdu.smarthome.services.DeviceService;
 
 @RestController
-@RequestMapping("/api/v1/houses")
+@RequestMapping(ApiEndpoints.House.BASE)
 public class DeviceController {
     
     private static final Logger logger = LoggerFactory.getLogger(DeviceController.class);
