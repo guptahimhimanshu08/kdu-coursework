@@ -584,10 +584,11 @@ header{
     padding: 15px;
 
     #nav-list {
-      flex-direction: column;
+      flex-direction: row;
       gap: 0.5rem;
       width: 100%;
       text-align: center;
+      justify-content: center;
 
       li a {
         padding: 12px 16px;
