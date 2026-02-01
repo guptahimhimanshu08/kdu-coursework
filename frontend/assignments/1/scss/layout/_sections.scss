@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.content-section-container {
+  background-color: $color-bg-primary;
+  height: 100vh;
+  margin-left: $sidebar-width;
+  overflow-y: auto;
+  
+  .content-section {
+    top: 0;
+    background-color: $color-bg-primary;
+    z-index: $z-index-navigation;
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid $color-border;
+    gap: 12px;
+    
+    .profile-icon-area {
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: $border-radius-full;
+      }
+    }
+  }
+}
