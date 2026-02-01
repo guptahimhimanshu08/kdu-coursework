@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+body {
+  background-color: $color-bg-primary;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-container {
+  display: block;
+  color: $color-text-primary;
+  height: 100vh;
+  background-color: $color-bg-secondary;
+  overflow: hidden;
+}
