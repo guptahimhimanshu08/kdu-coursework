@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.query-items {
+    @include flex-center;
+    gap: $spacing-md;
+    padding: $spacing-sm;
+    margin-bottom: $spacing-md;
+    border-radius: $border-radius-sm;
+    background-color: $color-background-light;
+
+    .search-input,
+    .genre-select,
+    .rating-select {
+        padding: $spacing-xs;
+        border-radius: $border-radius-sm;
+        border: 1px solid $color-input-border;
+        outline: none;
+    }
+}
