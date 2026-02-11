@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+
+.product-card {
+    width: $card-width;
+    background: $color-white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+        transform $transition-fast,
+        box-shadow $transition-fast;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-lg;
+    }
+
+    .image-wrapper {
+        position: relative;
+        padding: $spacing-md;
+        background: $color-bg-lightest;
+
+        img {
+            width: 100%;
+            height: $image-height;
+            object-fit: contain;
+            display: block;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: $spacing-12;
+            left: $spacing-12;
+            background: $color-danger;
+            color: $color-white;
+            font-size: $font-xs;
+            font-weight: 600;
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $radius-full;
+        }
+
+        .rating-badge {
+            position: absolute;
+            top: $spacing-12;
+            right: $spacing-12;
+            background: $color-text-primary;
+            color: $color-white;
+            font-size: $font-xs;
+            font-weight: 500;
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $radius-md;
+            display: flex;
+            align-items: center;
+            gap: $spacing-xs;
+        }
+    }
+
+    .content {
+        padding: $spacing-md;
+
+        .brand {
+            font-size: $font-xs;
+            font-weight: 600;
+            color: $color-text-light;
+            margin-bottom: $spacing-xs;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: $font-base;
+            font-weight: 600;
+            color: $color-text-dark;
+            line-height: 1.3;
+            margin-bottom: $spacing-12;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-6;
+
+            .original {
+                font-size: $font-sm;
+                color: $color-text-lighter;
+                text-decoration: line-through;
+            }
+
+            .final {
+                font-size: $font-lg;
+                font-weight: 700;
+                color: $color-success;
+            }
+        }
+
+        .stock {
+            font-size: $font-xs;
+            color: $color-text-muted;
+        }
+    }
+}
