@@ -1,0 +1,151 @@
+$button-color-1:#b2f2bb;
+$button-color-2:#ffc9c9;
+$button-border-1:#2f9e44;
+$button-border-2:#e03131;
+$border-color:#000;
+@font-face {
+  font-family: 'Poppins'; 
+  src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+main{
+    display: flex;
+}
+header{
+    .title{
+        background-color: #1871c2;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+    }
+}
+.left_section{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: space-around;
+    overflow-x: hidden;
+    &_metrics{
+        display: flex;
+        height: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+        .zomato_label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $border-color;
+            padding: 6px 10px;
+            gap: 1rem;
+        }
+        .price_display{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 25%;
+            border: 1px solid $border-color;
+            gap: 1rem;
+            p{
+                font-size: 20px;
+            }
+        }
+        .text_area{
+            border: 1px solid #000;
+
+            .post_input{
+                outline: none;
+                border: none;
+                box-sizing: border-box;
+                resize: none;
+            }
+        }
+
+    }
+
+    &_graph{
+        margin: 15px 25px 15px 25px;
+        border: 1px solid #000;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        .grid_block{
+            border: 1px dashed $border-color;
+            opacity: 0.5;
+        }
+
+        .bar_graph{
+            height: 500px;
+            position: absolute;
+            right: 425px;
+            left: 25px;
+            z-index: 10;      
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: flex-end;
+            scroll-behavior: smooth;
+            .bar{
+                position: relative;
+                height: 320px;
+                width: 20px;
+                background-color: $button-color-1;
+                border: 1px solid $button-border-1;
+            }
+        }
+
+    }
+
+
+}
+
+.right_section{
+    &_history{
+        height: 100%;
+        width: 90%;
+        border: 1px solid #000;
+        margin: 15px 25px 15px 0px;
+        padding: 8px;
+        overflow-y: scroll;
+    }
+    .history_log{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border: 1px solid #000;
+        margin: 10px 8px 10px 8px;
+        width: 90%;
+        padding: 8px 8px 8px 8px;
+        border-radius: 10px;
+        .log_right_part{
+            margin-left: 10px;
+        }
+    }
+}
+
+.button{
+    cursor: pointer;
+    padding: 16px 15px;
+    width: 120px;
+    border-radius: 5%;
+
+}   
+.buy_button{
+    color: #2f9e44;
+    border: 1px solid $button-border-1;
+    background-color: $button-color-1;
+   
+}
+.sell_button{
+    color: #e03131;
+    border: 1px solid $button-border-2;
+    background-color: $button-color-2;
+}
+
