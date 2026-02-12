@@ -1,0 +1,15 @@
+.users-grid-container {
+    h1 {
+        text-align: center;
+    }
+    .users-grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+        padding:10px;
+
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
