@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+
+.add-to-cart-button{
+    padding: $spacing-6 $spacing-14;
+    background-color: $color-primary;
+    color: $color-white;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    font-size: $font-base;
+    transition: background-color $transition-fast;
+
+    &:hover {
+        background-color: $color-primary-hover;
+    }
+
+}
