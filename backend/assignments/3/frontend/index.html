@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Serverless Counter</title>
+  </head>
+  <body>
+    <h1>Counter App</h1>
+    <p>Counter: <span id="count">Loading...</span></p>
+
+    <button onclick="addCounter()">Add Counter</button>
+
+    <script>
+      const API_BASE_URL =
+        "https://yqwwii58ca.execute-api.ap-southeast-1.amazonaws.com/prod";
+
+      async function getCounter() {
+        const res = await fetch(`${API_BASE_URL}/counter`);
+        const data = await res.json();
+        document.getElementById("count").innerText = data.count;
+      }
+
+      async function addCounter() {
+        const res = await fetch(`${API_BASE_URL}/counter`, {
+          method: "PUT",
+        });
+        const data = await res.json();
+        document.getElementById("count").innerText = data.count;
+      }
+
+      getCounter();
+    </script>
+  </body>
+</html>
