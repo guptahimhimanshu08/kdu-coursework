@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin card($hover: true) {
+    border: 1px solid $color-border;
+    padding: $spacing-md;
+    margin: $spacing-xs;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-light;
+
+    @if $hover {
+        &:hover {
+            box-shadow: $shadow-medium;
+        }
+    }
+}
