@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux"
 import { setPaymentDetails } from "../../features/bookingSlice"
 import React from "react"
 import styles from "./CreditCardDetails.module.scss"
+import logo from "../../assets/visaLogo.png"
 
 const CreditCardDetails = () => {
     console.log("Rendering CreditCardDetails component")
@@ -69,7 +70,7 @@ const CreditCardDetails = () => {
                         onChange={handleCardNumberChange}
                         required
                     />
-                    <img src="/src/assets/visaLogo.png" alt="Visa logo" />
+                    <img src={logo} alt="Visa logo" />
             </div>
 
             <div className={styles.cardDetailItems2}>

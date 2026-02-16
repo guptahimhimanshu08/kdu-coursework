@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import styles from "./BookingConfirmation.module.scss";
 import Loader from "../../components/loader/Loader";
+import ErrorBoundary from "../../components/ErrorBoundary/ErrorBoundary";
 
 export default function BookingConfirmation() {
 
@@ -54,10 +55,10 @@ export default function BookingConfirmation() {
     const { bookingDetails } = data;
 
     return (
-        <div className={styles.confirmationContainer}>
-            <div className={styles.confirmationCard}>
-                {/* Success Header */}
-                <div className={styles.successHeader}>
+        <ErrorBoundary>
+            <div className={styles.confirmationContainer}>
+                <div className={styles.confirmationCard}>
+                    <div className={styles.successHeader}>
                     <div className={styles.successIcon}>
                         <i className="fas fa-check-circle"></i>
                     </div>
@@ -65,15 +66,12 @@ export default function BookingConfirmation() {
                     <p>Thank you for choosing our cleaning service</p>
                 </div>
 
-                {/* Booking ID */}
                 <div className={styles.bookingIdSection}>
                     <span className={styles.label}>Booking ID</span>
                     <span className={styles.bookingId}>{data.bookingId}</span>
                 </div>
 
-                {/* Booking Details */}
                 <div className={styles.detailsGrid}>
-                    {/* Cleaning Service Details */}
                     <div className={styles.detailCard}>
                         <h3><i className="fas fa-broom"></i> Service Details</h3>
                         <div className={styles.detailRow}>
@@ -90,7 +88,6 @@ export default function BookingConfirmation() {
                         </div>
                     </div>
 
-                    {/* Schedule */}
                     <div className={styles.detailCard}>
                         <h3><i className="fas fa-calendar-alt"></i> Schedule</h3>
                         <div className={styles.detailRow}>
@@ -103,7 +100,6 @@ export default function BookingConfirmation() {
                         </div>
                     </div>
 
-                    {/* Property Details */}
                     <div className={styles.detailCard}>
                         <h3><i className="fas fa-home"></i> Property Details</h3>
                         <div className={styles.detailRow}>
@@ -116,7 +112,6 @@ export default function BookingConfirmation() {
                         </div>
                     </div>
 
-                    {/* Address */}
                     <div className={styles.detailCard}>
                         <h3><i className="fas fa-map-marker-alt"></i> Address</h3>
                         <div className={styles.detailRow}>
@@ -130,7 +125,6 @@ export default function BookingConfirmation() {
                     </div>
                 </div>
 
-                {/* Extra Services */}
                 {bookingDetails.extras && bookingDetails.extras.length > 0 && (
                     <div className={styles.extrasSection}>
                         <h3> Additional Services</h3>
@@ -150,7 +144,6 @@ export default function BookingConfirmation() {
                     </div>
                 )}
 
-                {/* Total Price */}
                 <div className={styles.totalSection}>
                     <div className={styles.totalRow}>
                         <span className={styles.totalLabel}>Total Amount</span>
@@ -158,7 +151,6 @@ export default function BookingConfirmation() {
                     </div>
                 </div>
 
-                {/* Action Buttons */}
                 <div className={styles.actionButtons}>
                     <button className={styles.primaryButton} onClick={() => navigate('/')}>
                     Book Another Service
@@ -166,5 +158,6 @@ export default function BookingConfirmation() {
                 </div>
             </div>
         </div>
+        </ErrorBoundary>
     );
 }

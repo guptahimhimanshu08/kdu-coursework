@@ -6,37 +6,7 @@ import styles from "./PersonalDetails.module.scss"
 const PersonalDetails = () => {
     // console.log("Rendering PersonalDetails component")
     const dispatch = useDispatch()
-    const [errors, setErrors] = React.useState<{
-        email?: string
-        phone?: string
-        address?: string
-        zip?: string
-    }>({})
-
-    const validateEmail = (value: string) => {
-        if (!value) return "Email is required"
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
-            return "Invalid email format"
-        return ""
-    }
-
-    const validatePhone = (value: string) => {
-        if (!value) return "Phone is required"
-        if (value.length !== 10) return "Phone must be 10 digits"
-        return ""
-    }
-
-    const validateZip = (value: string) => {
-        if (!value) return "ZIP is required"
-        if (value.length !== 5) return "ZIP must be 5 digits"
-        return ""
-    }
-
-    const validateAddress = (value: string) => {
-        if (!value) return "Address is required"
-        if (value.length < 5) return "Address too short"
-        return ""
-    }
+  
 
     const handlePersonalDetailsChange = (key: string, value: any) => {
         dispatch(setPersonalDetails({ key, value }))
@@ -49,12 +19,7 @@ const PersonalDetails = () => {
         
         handlePersonalDetailsChange("phone", value)
 
-        setErrors((prev) => ({
-            ...prev,
-            phone: validatePhone(value),
-        }))
-
-
+       
     }
 
     const handleZipChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,19 +27,12 @@ const PersonalDetails = () => {
         e.target.value = value
         handlePersonalDetailsChange("zip", value)
 
-        setErrors((prev) => ({
-            ...prev,
-            zip: validateZip(value),
-        }))
     }
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.trim()
         handlePersonalDetailsChange("email", value)
-        setErrors((prev) => ({
-            ...prev,
-            email: validateEmail(value),
-        }))
+      
     }
 
     const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -82,10 +40,6 @@ const PersonalDetails = () => {
         e.target.value = value
         handlePersonalDetailsChange("address", value)
 
-        setErrors((prev) => ({
-            ...prev,
-            address: validateAddress(value),
-        }))
     }
 
     return (

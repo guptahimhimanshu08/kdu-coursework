@@ -4,6 +4,7 @@ import Loader from '../../components/loader/Loader';
 import { Header } from '../../components/Header/Header';
 import { PreferencesSection } from '../../components/PreferencesSection/PreferencesSection';
 import { SummarySection } from '../../components/SummarySection/SummarySection';
+import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary';
 
 
 export default function BookingPage() {
@@ -22,9 +23,13 @@ export default function BookingPage() {
            <Header />
             <div className={styles.booking_page_grid}>
                 
-                <PreferencesSection />
+                <ErrorBoundary>
+                    <PreferencesSection />
+                </ErrorBoundary>
 
-                <SummarySection />
+                <ErrorBoundary>
+                    <SummarySection />
+                </ErrorBoundary>
             </div>
         </div>
 

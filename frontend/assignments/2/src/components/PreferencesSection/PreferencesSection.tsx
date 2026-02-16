@@ -6,12 +6,12 @@ import { HomeDetails } from '../HomeDetails/HomeDetails';
 import { ExtraOptions } from '../ExtraOptions/ExtraOptions';
 import { HoursAndDates } from '../HoursAndDates/HoursAndDates';
 import ConfirmBookingButton from '../ConfirmBookingButton/ConfirmBookingButton';
-import CreditCardDetails from '../CreditCardDetails/CreditCardDetails';
-import PersonalDetails from '../PersonalDetails/PersonalDetails';
+
 import { validateBooking } from '../../utils/validation';
 import { useGetConfigQuery } from '../../services/configApi';
 import type { RootState } from '../../app/store';
 import { setAcceptedTerms } from '../../features/bookingSlice';
+import { PaymentDetails } from '../PaymentDetails/PaymentDetails';
 
 export const PreferencesSection = () => {
     const dispatch = useDispatch();
@@ -48,9 +48,7 @@ export const PreferencesSection = () => {
             {/* Choose hours and dates Component  */}
             <HoursAndDates />
             {/* Pyment component */}
-            <CreditCardDetails />
-            {/* Personal Details */}
-            <PersonalDetails />
+            <PaymentDetails />
 
             <div className={styles.termsContainer}>
                 <input
