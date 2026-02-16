@@ -1,0 +1,1 @@
+export type Event = "Conference" | "Workshop" | "Webinar" | "Concert";

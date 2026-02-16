@@ -1,0 +1,104 @@
+@use '../../styles/variables' as vars;
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: vars.$spacing-2xl;
+  background-color: vars.$background-lighter;
+}
+
+.errorContent {
+  background: vars.$white;
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 6px vars.$shadow-light;
+  
+  i {
+    font-size: 4rem;
+    color: vars.$error-color;
+    margin-bottom: vars.$spacing-xl;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: vars.$text-dark;
+    margin-bottom: vars.$spacing-md;
+  }
+  
+  p {
+    font-size: vars.$font-size-lg;
+    color: vars.$text-medium;
+    margin-bottom: vars.$spacing-2xl;
+  }
+}
+
+.errorDetails {
+  margin: vars.$spacing-xl 0;
+  text-align: left;
+  background: vars.$background-lighter;
+  padding: vars.$spacing-md;
+  border-radius: vars.$border-radius-lg;
+  border: vars.$border-width-thin solid vars.$border-color-lighter;
+  
+  summary {
+    cursor: pointer;
+    font-weight: vars.$font-weight-semibold;
+    color: vars.$text-medium;
+    margin-bottom: vars.$spacing-xs;
+    
+    &:hover {
+      color: vars.$text-dark;
+    }
+  }
+  
+  pre {
+    margin-top: vars.$spacing-xs;
+    font-size: vars.$font-size-sm;
+    color: vars.$error-color;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+.errorActions {
+  display: flex;
+  gap: vars.$spacing-md;
+  justify-content: center;
+  
+  button {
+    padding: vars.$spacing-sm vars.$spacing-2xl;
+    font-size: vars.$font-size-md;
+    font-weight: vars.$font-weight-semibold;
+    border: none;
+    border-radius: vars.$border-radius-lg;
+    cursor: pointer;
+    transition: vars.$transition-fast;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.retryButton {
+  background-color: vars.$primary-color;
+  color: vars.$white;
+  
+  &:hover {
+    background-color: vars.$primary-dark;
+  }
+}
+
+.homeButton {
+  background-color: vars.$text-medium;
+  color: vars.$white;
+  
+  &:hover {
+    background-color: vars.$text-dark;
+  }
+}
