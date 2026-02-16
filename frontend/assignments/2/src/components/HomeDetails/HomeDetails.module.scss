@@ -1,0 +1,71 @@
+@use '../../styles/variables' as vars;
+
+.homeDetailsContainer{
+    padding: vars.$spacing-lg;
+    .homeDetailsContent{
+        display: flex;
+        justify-content: center;
+        gap: vars.$spacing-2xl;
+
+        @media (max-width: vars.$breakpoint-mobile) {
+            flex-direction: column;
+            gap: vars.$spacing-md;
+        }
+
+        .homeDetailsItem{
+            
+            @media (max-width: vars.$breakpoint-mobile) {
+                width: 100%;
+            }
+            
+            .homeDetailsItemHeader{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: vars.$spacing-sm;
+                padding: vars.$spacing-lg;
+                border: vars.$border-width-medium solid vars.$border-color;
+
+                img{
+                    margin-left: 45px;
+                    margin-right: 45px;
+                }
+                span{
+                    text-transform: uppercase;
+                    color: vars.$text-gray;
+                    font-size: small;
+                }
+            }
+
+            .homeDetailsItemCounts{
+                display: flex;
+                background-color: vars.$white;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: vars.$border-width-medium solid vars.$border-color;
+                button{
+                    padding: vars.$spacing-xs 18px;
+                    background-color: vars.$white;
+                    border: none;
+                    border-left: vars.$border-width-medium solid vars.$border-color;
+                    border-right: vars.$border-width-medium solid vars.$border-color;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: vars.$background-light;
+                    }
+                }
+
+                span{
+                    color: vars.$primary-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+     @media (max-width: vars.$breakpoint-mobile) {
+        padding: vars.$spacing-sm;
+    }
+}

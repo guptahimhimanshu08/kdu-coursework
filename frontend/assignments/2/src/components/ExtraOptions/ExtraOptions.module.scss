@@ -1,0 +1,50 @@
+@use '../../styles/variables' as vars;
+
+.extraOptionsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: vars.$spacing-lg;
+    .extraOptionsList{
+        display: flex;
+        align-items: center;
+        gap: vars.$spacing-md;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media (max-width: vars.$breakpoint-mobile) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .extraCard{
+            display: flex;
+            flex-direction: column;
+            border: vars.$border-width-thick solid vars.$border-color;
+            background-color: vars.$white;
+            border-radius: vars.$border-radius-lg;
+            cursor: pointer;
+            padding: 10px;
+            align-items: center;
+            gap: vars.$spacing-xs;
+            width: 100%;
+            span{
+                color: vars.$text-gray;
+            }
+            &:hover{
+                background-color: vars.$background-light;
+                border-color: vars.$primary-color;
+                span{
+                    color: vars.$primary-color;
+                }
+            }
+
+            &.selected{
+                background-color: vars.$primary-light;
+                border-color: vars.$primary-color;
+                span{
+                    color: vars.$primary-color;
+                }
+            }
+        }
+    }
+}

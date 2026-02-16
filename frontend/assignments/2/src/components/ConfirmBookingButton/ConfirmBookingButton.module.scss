@@ -1,0 +1,45 @@
+@use '../../styles/variables' as vars;
+
+.confirmBookingButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .confirmBookingButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: vars.$spacing-sm;
+        padding: vars.$spacing-sm vars.$spacing-xl;
+        width: 100%;
+        background-color: vars.$success-color;
+        cursor: pointer;
+        font-size: medium;
+        font-weight: bold;
+        border: none;
+        border-radius: vars.$border-radius-lg;
+        span{
+            color: vars.$white;
+        }
+    }
+
+    .confirmBookingButtonDisabled{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vars.$spacing-sm;
+        padding: vars.$spacing-sm vars.$spacing-xl;
+        width: 100%;
+        background-color: vars.$border-color;
+        cursor: not-allowed;
+        font-size: medium;
+        font-weight: bold;
+        span{
+            color: vars.$white;
+        }
+        background-color: vars.$success-color;
+        opacity: 0.6;
+        border: none;
+        border-radius: vars.$border-radius-lg;
+    }
+}

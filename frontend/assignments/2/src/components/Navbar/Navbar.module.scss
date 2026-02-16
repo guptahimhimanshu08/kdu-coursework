@@ -1,0 +1,23 @@
+@use '../../styles/variables' as vars;
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    z-index: 10;
+    padding: vars.$spacing-lg;
+    box-shadow: vars.$shadow-light 0px 2px 4px;
+    background-color: vars.$white;
+    .logo{
+        margin-left: vars.$spacing-lg;
+        h2{
+            span{
+                color: vars.$primary-color;
+            }
+            margin: 0;
+        }
+    }
+}

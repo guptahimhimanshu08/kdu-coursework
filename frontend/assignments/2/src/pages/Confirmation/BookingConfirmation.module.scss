@@ -1,0 +1,354 @@
+@use '../../styles/variables' as vars;
+
+.confirmationContainer {
+    min-height: 100vh;
+    background: vars.$background-light;
+    padding: vars.$spacing-3xl vars.$spacing-lg;
+}
+
+.confirmationCard {
+    background: vars.$white;
+    border-radius: vars.$border-radius-lg;
+    box-shadow: 0 2px 8px vars.$shadow-light;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    border: vars.$border-width-thin solid vars.$border-color;
+}
+
+.successHeader {
+    background: vars.$primary-color;
+    color: vars.$white;
+    text-align: center;
+    padding: vars.$spacing-2xl vars.$spacing-xl;
+    border-bottom: vars.$border-width-thin solid vars.$primary-dark;
+
+    .successIcon {
+        font-size: 48px;
+        margin-bottom: vars.$spacing-sm;
+    }
+
+    h1 {
+        margin: 0 0 vars.$spacing-xs 0;
+        font-size: vars.$font-size-3xl;
+        font-weight: vars.$font-weight-semibold;
+    }
+
+    p {
+        margin: 0;
+        font-size: vars.$font-size-base;
+    }
+}
+
+.bookingIdSection {
+    background: vars.$background-lighter;
+    padding: vars.$spacing-lg vars.$spacing-2xl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: vars.$border-width-thin solid vars.$border-color;
+
+    .label {
+        font-size: vars.$font-size-xs;
+        color: vars.$text-medium;
+        font-weight: vars.$font-weight-medium;
+        text-transform: uppercase;
+    }
+
+    .bookingId {
+        font-size: vars.$font-size-lg;
+        font-weight: vars.$font-weight-semibold;
+        color: vars.$text-dark;
+    }
+}
+
+.detailsGrid {
+    padding: vars.$spacing-2xl;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: vars.$spacing-md;
+}
+
+.detailCard {
+    background: vars.$background-lightest;
+    border: vars.$border-width-thin solid vars.$border-color;
+    border-radius: vars.$border-radius-sm;
+    padding: vars.$spacing-lg;
+
+    h3 {
+        margin: 0 0 vars.$spacing-md 0;
+        font-size: vars.$font-size-md;
+        color: vars.$text-dark;
+        display: flex;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        font-weight: vars.$font-weight-semibold;
+        border-bottom: vars.$border-width-medium solid vars.$primary-color;
+        padding-bottom: vars.$spacing-xs;
+
+        i {
+            color: vars.$primary-color;
+            font-size: vars.$font-size-md;
+        }
+    }
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: vars.$border-width-thin solid vars.$border-color-light;
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.detailLabel {
+    font-size: vars.$font-size-sm;
+    color: vars.$text-medium;
+}
+
+.detailValue {
+    font-size: vars.$font-size-sm;
+    color: vars.$text-dark;
+    font-weight: vars.$font-weight-medium;
+    text-align: right;
+}
+
+.extrasSection {
+    padding: 0 vars.$spacing-2xl vars.$spacing-2xl vars.$spacing-2xl;
+
+    h3 {
+        margin: 0 0 vars.$spacing-md 0;
+        font-size: vars.$font-size-md;
+        color: vars.$text-dark;
+        display: flex;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        font-weight: vars.$font-weight-semibold;
+
+        i {
+            color: vars.$primary-color;
+            font-size: vars.$font-size-md;
+        }
+    }
+}
+
+.extrasList {
+    background: vars.$background-lightest;
+    border: vars.$border-width-thin solid vars.$border-color;
+    border-radius: vars.$border-radius-sm;
+    padding: vars.$spacing-md;
+}
+
+.extraItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: vars.$border-width-thin solid vars.$border-color-light;
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.extraName {
+    font-size: vars.$font-size-sm;
+    color: vars.$text-dark;
+    display: flex;
+    align-items: center;
+    gap: vars.$spacing-xs;
+
+    i {
+        color: vars.$primary-color;
+        font-size: vars.$spacing-sm;
+    }
+}
+
+.extraPrice {
+    font-size: vars.$font-size-sm;
+    color: vars.$text-dark;
+    font-weight: vars.$font-weight-semibold;
+}
+
+.totalSection {
+    background: vars.$primary-color;
+    padding: vars.$spacing-lg vars.$spacing-2xl;
+    border-top: vars.$border-width-thick solid vars.$primary-dark;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalLabel {
+    font-size: vars.$font-size-md;
+    color: vars.$white;
+    font-weight: vars.$font-weight-semibold;
+    text-transform: uppercase;
+}
+
+.totalPrice {
+    font-size: vars.$font-size-3xl;
+    color: vars.$white;
+    font-weight: vars.$font-weight-bold;
+}
+
+.actionButtons {
+    padding: vars.$spacing-xl vars.$spacing-2xl;
+    display: flex;
+    justify-content: center;
+    background: vars.$background-lighter;
+    border-top: vars.$border-width-thin solid vars.$border-color;
+}
+
+.primaryButton {
+    background: vars.$primary-color;
+    color: vars.$white;
+    border: none;
+    padding: vars.$spacing-sm vars.$spacing-xl;
+    font-size: vars.$font-size-base;
+    font-weight: vars.$font-weight-medium;
+    border-radius: vars.$border-radius-sm;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: vars.$spacing-xs;
+
+    &:hover {
+        background: vars.$primary-dark;
+    }
+
+    i {
+        font-size: vars.$font-size-md;
+    }
+}
+
+.loadingContainer {
+    min-height: 100vh;
+    background: vars.$background-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.$spacing-lg;
+
+    p {
+        color: vars.$text-dark;
+        font-size: vars.$font-size-md;
+    }
+}
+
+.errorContainer {
+    min-height: 100vh;
+    background: vars.$background-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: vars.$spacing-3xl vars.$spacing-lg;
+
+    i {
+        font-size: 64px;
+        color: vars.$error-color;
+        margin-bottom: vars.$spacing-lg;
+    }
+
+    h2 {
+        color: vars.$text-dark;
+        font-size: vars.$font-size-3xl;
+        margin: 0 0 vars.$spacing-sm 0;
+    }
+
+    p {
+        color: vars.$text-medium;
+        font-size: vars.$font-size-md;
+        margin: 0 0 vars.$spacing-xl 0;
+    }
+
+    button {
+        background: vars.$primary-color;
+        color: vars.$white;
+        border: none;
+        padding: vars.$spacing-sm vars.$spacing-xl;
+        font-size: vars.$font-size-base;
+        font-weight: vars.$font-weight-medium;
+        border-radius: vars.$border-radius-sm;
+        cursor: pointer;
+
+        &:hover {
+            background: vars.$primary-dark;
+        }
+    }
+}
+
+@media (max-width: vars.$breakpoint-mobile) {
+    .confirmationContainer {
+        padding: vars.$spacing-lg 10px;
+    }
+
+    .successHeader {
+        padding: vars.$spacing-xl vars.$spacing-md;
+
+        .successIcon {
+            font-size: 40px;
+        }
+
+        h1 {
+            font-size: vars.$font-size-2xl;
+        }
+
+        p {
+            font-size: vars.$font-size-sm;
+        }
+    }
+
+    .bookingIdSection {
+        flex-direction: column;
+        gap: vars.$spacing-xs;
+        align-items: flex-start;
+        padding: vars.$spacing-md vars.$spacing-lg;
+    }
+
+    .detailsGrid {
+        padding: vars.$spacing-lg;
+        grid-template-columns: 1fr;
+        gap: vars.$spacing-sm;
+    }
+
+    .extrasSection {
+        padding: 0 vars.$spacing-lg vars.$spacing-lg vars.$spacing-lg;
+    }
+
+    .totalSection {
+        padding: vars.$spacing-md vars.$spacing-lg;
+    }
+
+    .totalPrice {
+        font-size: vars.$font-size-xl;
+    }
+
+    .actionButtons {
+        padding: vars.$spacing-lg;
+    }
+
+    .primaryButton {
+        width: 100%;
+        justify-content: center;
+    }
+}
