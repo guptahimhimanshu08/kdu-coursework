@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-lg;
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+        align-items: stretch;
+        justify-content: space-around;
+
+        .formFields {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                font-weight: bold;
+            }
+
+            input,
+            select,
+            textarea {
+                padding: 8px;
+                border: 1px solid $border-color;
+                border-radius: $border-radius-sm;
+                font-size: $font-size-md;
+                
+            }
+            textarea {
+                resize:none;
+            }
+        }
+
+        .formButton{
+            padding: 10px;
+            background-color: rgb(93, 196, 93);
+            color: $white;
+            border: none;
+            border-radius: $border-radius-sm;
+            font-size: $font-size-md;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary-dark;
+            }
+        }
+    }
+}
