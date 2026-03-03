@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.book_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: $spacing-md;
+    
+    &_items {
+        width: 100%;    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-md;
+    }
+
+    &_item {
+        @include card;
+        .available {
+            padding: 2px;
+            background-color: $color-success;
+            border-radius: 5px;
+            color: $color-background-light;
+        }
+        .unavailable {
+            padding: 2px;
+            background-color: $color-error;
+            border-radius: 5px;
+            color: $color-background-light;
+        }
+    }
+}
