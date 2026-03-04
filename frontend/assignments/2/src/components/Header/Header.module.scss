@@ -1,0 +1,7 @@
+@use '../../styles/variables' as vars;
+
+.header{
+    padding: vars.$spacing-lg;
+    text-align: center;
+    margin-bottom: vars.$spacing-lg;
+}

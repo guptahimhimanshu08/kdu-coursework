@@ -1,0 +1,33 @@
+@use '../../styles/variables' as vars;
+
+.booking_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: vars.$spacing-lg;
+
+    &_grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: vars.$spacing-lg;
+        width: 100%;
+        padding: vars.$spacing-lg;
+        border-radius: vars.$border-radius-lg;
+
+        > :last-child {
+            align-self: start;
+        }
+
+        @media (max-width: vars.$breakpoint-mobile) {
+            grid-template-columns: 1fr;
+            padding: 10px;
+            gap: vars.$spacing-md;
+        }
+
+    }
+
+    @media (max-width: vars.$breakpoint-mobile) {
+        padding: 10px;
+    }
+}

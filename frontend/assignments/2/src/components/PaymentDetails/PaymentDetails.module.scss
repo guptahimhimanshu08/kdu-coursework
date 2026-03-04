@@ -1,0 +1,30 @@
+@use '../../styles/variables' as vars;
+
+.paymentDetailsContainer {
+    padding: vars.$spacing-lg;
+    border-radius: vars.$border-radius-lg;
+    margin-top: vars.$spacing-lg;
+
+    .paymentHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .securityInfo {
+            display: flex;
+            align-items: center;
+            gap: vars.$spacing-xs;
+            border: vars.$border-width-medium solid vars.$success-color;
+            padding: vars.$spacing-xs;
+            border-radius: vars.$border-radius-sm;
+            span {
+                font-size: 24px;
+            }
+            
+            .securityText {
+                font-size: 12px;
+                color: vars.$success-color;
+            }
+        }
+    }
+}

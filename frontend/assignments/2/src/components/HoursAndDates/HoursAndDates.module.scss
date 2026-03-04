@@ -1,0 +1,121 @@
+@use '../../styles/variables' as vars;
+
+.hoursAndDatesContainer {
+    padding: vars.$spacing-lg;
+    border-radius: vars.$border-radius-lg;
+    margin-bottom: vars.$spacing-lg;
+
+    @media (max-width: vars.$breakpoint-mobile) {
+        padding: vars.$spacing-sm;
+    }
+
+    .hoursAndDatesSelectionContainer {
+        display: flex;
+        gap: vars.$spacing-3xl;
+        justify-content: space-around;
+
+        @media (max-width: vars.$breakpoint-mobile) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: vars.$spacing-lg;
+        }
+        .hoursContainer {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            gap: vars.$spacing-xs;
+            background-color: vars.$white;
+            padding: vars.$spacing-md;
+
+            @media (max-width: vars.$breakpoint-mobile) {
+                width: 100%;
+            }
+
+
+            .hoursSetter {
+                display: flex;
+                background-color: vars.$white;
+                justify-content: space-between;
+                align-items: center;
+                border: vars.$border-width-medium solid vars.$border-color;
+                border-radius: vars.$border-radius-sm;
+
+                button {
+                    padding: vars.$spacing-xs 18px;
+                    background-color: vars.$white;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: vars.$background-light;
+                    }
+                }
+
+                span {
+                    color: vars.$primary-color;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .datePickerContainer {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            gap: vars.$spacing-xs;
+            background-color: vars.$white;
+            padding: vars.$spacing-md;
+
+            @media (max-width: vars.$breakpoint-mobile) {
+                width: 100%;
+            }
+
+            input {
+                padding: vars.$spacing-xs;
+                border: vars.$border-width-thin solid vars.$border-color-gray;
+                border-radius: vars.$border-radius-sm;
+
+                &:hover {
+                    border-color: vars.$primary-color;
+                }
+            }
+        }
+    }
+    .startTimeContainer {
+        padding: vars.$spacing-lg;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: vars.$breakpoint-mobile) {
+            padding: vars.$spacing-sm;
+        }
+        .startTimeOptions{
+            display: flex;
+            flex-wrap: wrap;
+            gap: vars.$spacing-lg;
+
+            @media (max-width: vars.$breakpoint-mobile) {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .timeSlot{
+                cursor: pointer;
+                padding: vars.$spacing-sm 22px;
+                border: vars.$border-width-medium solid vars.$border-color;
+                border-radius: vars.$border-radius-lg;
+            
+                &.availableTimeSlot{
+                    background-color: vars.$white;
+                    &:hover {
+                        border-color: vars.$primary-color;
+                    }
+                }
+                &.selectedTimeSlot{
+                    border: vars.$border-width-medium solid vars.$primary-color;
+                    background-color: vars.$primary-light;
+                }
+            }
+        }
+    }
+}
