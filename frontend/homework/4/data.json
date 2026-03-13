@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "age": 20,
+    "department": "Development",
+    "salary": 75000
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "age": 30,
+    "department": "Management",
+    "salary": 90000
+  },
+  {
+    "id": 3,
+    "name": "Charlie Brown",
+    "age": 33,
+    "department": "Design",
+    "salary": 68000
+  },
+  {
+    "id": 4,
+    "name": "Diana Prince",
+    "age": 25,
+    "department": "Analytics",
+    "salary": 95000
+  },
+  {
+    "id": 5,
+    "name": "Ethan Hunt",
+    "age": 38,
+    "department": "Operations",
+    "salary": 80000
+  },
+  {
+    "id": 6,
+    "name": "Fiona Gallagher",
+    "age": 24,
+    "department": "Marketing",
+    "salary": 60000
+  },
+  {
+    "id": 7,
+    "name": "George Martin",
+    "age": 30,
+    "department": "Development",
+    "salary": 70000
+  },
+  {
+    "id": 8,
+    "name": "Hannah Lee",
+    "age": 31,
+    "department": "Human Resources",
+    "salary": 85000
+  }
+]
