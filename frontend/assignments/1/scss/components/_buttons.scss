@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.tweet-button {
+  @include button-hover($color-primary, $color-primary-hover);
+  color: $color-text-primary;
+  border: none;
+  padding: 8px 16px;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  
+  &:disabled {
+    background-color: rgba(29, 155, 240, 0.5);
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.floating-tweet-button {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  background-color: $color-primary;
+  color: $color-text-primary;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 60px;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  
+  &.hidden {
+    display: none;
+  }
+  
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,24 @@
+// Colors
+$color-primary: #1D9BF0;
+$color-primary-hover: #1a8cd8;
+$color-bg-primary: black;
+$color-bg-secondary: #333;
+$color-border: rgb(47, 51, 54);
+$color-text-primary: white;
+$color-text-secondary: rgb(113, 118, 123);
+
+// Sizing
+$sidebar-width: 280px;
+$border-radius-sm: 20px;
+$border-radius-md: 30px;
+$border-radius-lg: 50px;
+$border-radius-full: 50%;
+
+// Transitions
+$transition-base: 0.2s;
+
+// Z-index
+$z-index-navigation: 10;
+$z-index-modal: 100;
+$z-index-overlay: 200;
+$z-index-sidebar: 999;
